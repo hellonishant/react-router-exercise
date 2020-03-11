@@ -1,21 +1,11 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import { Switch, Link, NavLink, Route } from "react-router-dom";
-import Food from "./Food";
-import "./App.css";
+import { Route } from "react-router-dom";
 
-// Route Params are given using the /url/:param form and the route props are needed to
-// be passed using through function because that's how render prop works in Route Component
-// while the component props only need the name of the component it needs to render.
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<Route
-					exact
-					path="/food/:name"
-					render={routerProps => <Food {...routerProps} />}
-				/>
+			<div>
+				<h1>Write Something</h1>
 			</div>
 		);
 	}
