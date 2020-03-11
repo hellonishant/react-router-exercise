@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
+import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 
 /**
 Redirect is used to replace any new route with the url route specified.
-On the other hand the history.push() method only pushes a new entry on the top 
-of the history stack. 
-In the former case we can not find the orignal url that redirected us but in the 
-later the history has the entry of the orignal url and the new address is put on 
+On the other hand the history.push() method only pushes a new entry on the top
+of the history stack.
+In the former case we can not find the orignal url that redirected us but in the
+later the history has the entry of the orignal url and the new address is put on
 the top level.
 E.g. using redirect on fb.com will not show the address fb.com in your history.
 **/
@@ -14,12 +14,12 @@ class Redirection extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			query: '',
+			query: ""
 		};
 	}
 
 	handleChange = event => {
-		this.setState({query: [event.target.value]});
+		this.setState({ query: [event.target.value] });
 	};
 
 	handleClick = event => {
